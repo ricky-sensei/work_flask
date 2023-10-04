@@ -4,15 +4,15 @@ from flask import Flask, url_for
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route('/')
 def show_index():
-    return "インデックスページ"
+    return "indexページ"
 
 
-@app.route("/hello/")
-@app.route("/hello/<name>")
+@app.route('/hello')
+@app.route('/hello/<name>')
 def show_hello(name=None):
-    return f"Hello,{name}"
+    return f"Hello {name}"
 
 
 if __name__ == "__main__":

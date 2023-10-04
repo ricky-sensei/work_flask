@@ -2,19 +2,21 @@ from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def index():
-    return '<h1> Top ページ </h1>'
+    return "<h1> Top ページ </h1>"
 
 
 @app.route("/list")
 def item_list():
-    return '<h1>商品一覧ページ</h1>'
+    return "<h1>商品一覧ページ</h1>"
 
 
 @app.route("/detail")
 def item_detail():
-    return '<h1>商品詳細ページ</h1>'
+    return "<h1>商品詳細ページ</h1>"
+
 
 @app.route("/dynamic/<value>")
 def dynamic_default(value):
